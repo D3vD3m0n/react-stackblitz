@@ -1,3 +1,50 @@
+@import '~@angular/material/theming';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import 'goldbeck-app-theme.scss';
+
 h1, p {
-  font-family: Lato;
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;  
+  background-color: transparent;
+}.example-spacer {
+  flex: 1 1 auto;
+}
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;  
+  background-color: transparent;
+}.main-bg{
+  display:block;
+  z-index: 0;
+  background:   
+  linear-gradient(to top,mat-color($goldbeck-palette-accent,200), mat-color($goldbeck-palette-accent,200)),
+  linear-gradient(to top, mat-color($goldbeck-palette-grey,200), transparent 90%),
+  radial-gradient(circle, transparent 40%, mat-color($goldbeck-palette-accent,500)),
+  url(assets/img/DSV_Halle_0871_11.jpg);     
+  background-blend-mode: 
+  soft-light,
+  hue,
+  soft-light,
+  normal;    
+ 
+  background-attachment: fixed;   
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;    
+  flex: 1;
+  
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .main-bg {
+    display:block;
+    z-index: 0;
+    background: 0
+    url(assets/img/DSV_Halle_0871_11_webkit.jpg);
+    background-attachment: fixed;   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    flex: 1;
+  }
 }
